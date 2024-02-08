@@ -3,84 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Pagina Web</title>
+    <title>[Tu Nombre] - Portafolio</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlazar a tu archivo CSS externo -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
 
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 1em;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+header {
+    background-color: #3c5f83;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 4em 0;
+}
 
-        nav li {
-            margin-right: 20px;
-        }
+header img {
+    max-width: 80%;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%; /* Agrega un borde redondeado a la imagen */
+}
 
-        section {
-            padding: 20px;
-        }
+.hero-text {
+    margin-top: 20px;
+}
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+.about-me, .experience, .projects {
+    background-color: #875753;
+    padding: 60px 0;
+}
+
+h2, h3 a {
+    color: #66AD64;
+}
+
+.job, .project {
+    margin-bottom: 40px;
+}
+
+h3 a {
+    color: #66AD64;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi Página Web</h1>
+        <div class="container">
+            <img src="https://plus.unsplash.com/premium_photo-1678565999588-08fdd0b1410b?q=80&w=1894&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laptop con fondo de programación">
+            <div class="hero-text">
+                <h1>[Tu Nombre]</h1>
+                <p>[Tu Eslogan o Descripción Breve]</p>
+            </div>
+        </div>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#seccion1">Sección 1</a></li>
-            <li><a href="#seccion2">Sección 2</a></li>
-            <li><a href="#seccion3">Sección 3</a></li>
-        </ul>
-    </nav>
-    
-    <section id="seccion1">
-        <h2>Sección 1</h2>
-        <p>Contenido de la sección 1...</p>
-    </section>
-    
-    <section id="seccion2">
-        <h2>Sección 2</h2>
-        <p>Contenido de la sección 2...</p>
-    </section>
-    
-    <section id="seccion3">
-        <h2>Sección 3</h2>
-        <p>Contenido de la sección 3...</p>
+
+    <section class="about-me">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy [Tu Nombre], un apasionado [Tu Profesión o Especialidad] con experiencia en [Áreas Específicas]. Mi objetivo es [Tu Objetivo Profesional].</p>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2024 Mi Página Web</p>
-    </footer>
+    <section class="experience">
+        <div class="container">
+            <h2>Experiencia Laboral</h2>
+            <div class="job">
+                <h3>[Nombre del Puesto]</h3>
+                <p>[Nombre de la Empresa] - [Fecha de Inicio] a [Fecha de Fin]</p>
+                <ul>
+                    <li>Responsabilidad 1.</li>
+                    <li>Responsabilidad 2.</li>
+                    <li>Responsabilidad 3.</li>
+                </ul>
+            </div>
+            <!-- Repite este bloque para cada experiencia laboral -->
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Proyectos Destacados</h2>
+            <div class="project">
+                <h3><a href="[Enlace al Proyecto 1]" target="_blank">Proyecto 1</a></h3>
+                <p>Descripción breve del proyecto. Puedes agregar más detalles aquí.</p>
+            </div>
+            <!-- Repite este bloque para cada proyecto -->
+        </div>
+    </section>
+
+    <!-- Agrega más secciones según sea necesario -->
+
 </body>
 </html>
