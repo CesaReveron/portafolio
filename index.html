@@ -1,123 +1,146 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Tu Nombre] - Portafolio</title>
-    <link rel="stylesheet" href="estilos.css"> <!-- Enlazar a tu archivo CSS externo -->
-    <style>
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  <title>Mi Portafolio Personal</title>
+  <style>
+    /* Reset de estilos para el body */
+    body {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    background-color: #3c5f83;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 4em 0;
-}
-
-header img {
-    max-width: 80%;
-    height: 500px;
-    width: 500px;
-    border-radius: 50%; /* Agrega un borde redondeado a la imagen */
-}
-
-.hero-text {
-    margin-top: 20px;
-}
-
-.about-me, .experience, .projects {
-    background-color: #875753;
-    padding: 60px 0;
-}
-
-h2, h3 a {
-    color: #66AD64;
-}
-
-.job, .project {
-    margin-bottom: 40px;
-}
-
-h3 a {
-    color: #66AD64;
-    text-decoration: none;
-}
-
-h3 a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    list-style-type: none;
+    /* Estilos generales para los encabezados */
+    h1, h2 {
+    margin: 0;
     padding: 0;
-}
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
 
-li {
-    margin-bottom: 8px;
-}
+    /* Estilos para la sección de inicio */
+    #inicio {
+    padding: 50px;
+    background-color: #ffffff;
+      padding: 50px;
+      background-color: #800000  ;
+    }
+
+    #inicio img {
+    width: 150px; /* Cambiar el ancho de la imagen según tu preferencia */
+    height: 150px; /* Cambiar la altura de la imagen según tu preferencia */
+    border-radius: 50%; /* Opcional: agregar bordes redondeados a la imagen */
+      width: 150px; /* Cambiar el ancho de la imagen según tu preferencia */
+      height: 150px; /* Cambiar la altura de la imagen según tu preferencia */
+      border-radius: 50%; /* Opcional: agregar bordes redondeados a la imagen */
+    }
 
 
-    </style>
+    /* Estilos para la sección de habilidades */
+    #habilidades {
+    padding: 50px;
+    background-color: #003DA5;
+      padding: 50px;
+      background-color: #3498DB;
+    }
+
+    /* Estilos para la lista de habilidades */
+    #habilidades ul {
+    list-style-type: none;
+      list-style-type: none;
+    }
+
+    /* Estilos para la sección de proyectos */
+    #proyectos {
+    padding: 50px;
+    background-color: #EF3340;
+      padding: 50px;
+      background-color: #27AE60 ;
+    }
+
+    /* Estilos para la lista de proyectos */
+    #proyectos ul {
+    list-style-type: none;
+      list-style-type: none;
+    }
+
+    /* Estilos para la sección de contacto */
+    #contacto {
+    padding: 50px;
+    background-color: #ECF0F1 ;
+      padding: 50px;
+      background-color: #34495E;
+    }
+
+    /* Estilos para la lista de contacto */
+    #contacto ul {
+    list-style-type: none;
+      list-style-type: none;
+    }
+
+    /* Estilos generales para los párrafos y listas */
+    p, ul {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fbf8f8;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #efe9e9;
+    }
+  </style>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="https://plus.unsplash.com/premium_photo-1678565999588-08fdd0b1410b?q=80&w=1894&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laptop con fondo de programación">
-            <div class="hero-text">
-                <h1>[Tu Nombre]</h1>
-                <p>[Tu Eslogan o Descripción Breve]</p>
-            </div>
-        </div>
-    </header>
+  <!-- Sección de inicio -->
+  <section id="inicio">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Imagen de cabecera">
 
-    <section class="about-me">
-        <div class="container">
-            <h2>Sobre Mí</h2>
-            <p>Hola, soy [Tu Nombre], un apasionado [Tu Profesión o Especialidad] con experiencia en [Áreas Específicas]. Mi objetivo es [Tu Objetivo Profesional].</p>
-        </div>
-    </section>
+    <h1>Cesar Reveron</h1>
+    <p>Programador Web en formación continua. Habilidades en HTML, CSS, JavaScript. <br> Cogito ergo sum.</p>
+    <ul>
+        <!-- Enlaces a redes sociales -->
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://github.com/CesaReveron">GitHub</a></li>
+        <!-- Agrega más enlaces a tus redes sociales aquí -->
+    </ul>
+  </section>
 
-    <section class="experience">
-        <div class="container">
-            <h2>Experiencia Laboral</h2>
-            <div class="job">
-                <h3>[Nombre del Puesto]</h3>
-                <p>[Nombre de la Empresa] - [Fecha de Inicio] a [Fecha de Fin]</p>
-                <ul>
-                    <li>Responsabilidad 1.</li>
-                    <li>Responsabilidad 2.</li>
-                    <li>Responsabilidad 3.</li>
-                </ul>
-            </div>
-            <!-- Repite este bloque para cada experiencia laboral -->
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="container">
-            <h2>Proyectos Destacados</h2>
-            <div class="project">
-                <h3><a href="[Enlace al Proyecto 1]" target="_blank">Proyecto 1</a></h3>
-                <p>Descripción breve del proyecto. Puedes agregar más detalles aquí.</p>
-            </div>
-            <!-- Repite este bloque para cada proyecto -->
-        </div>
-    </section>
-
-    <!-- Agrega más secciones según sea necesario -->
-
+  <!-- Sección de habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Otras habilidades relevantes</li>
+    </ul>
+  </section>
+  <!-- Sección de proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <ul>
+      <li>Nombre del Proyecto 1</li>
+      <li>Nombre del Proyecto 2</li>
+      <li>Nombre del Proyecto 3</li>
+      <!-- Puedes agregar más proyectos aquí -->
+    </ul>
+  </section>
+  <!-- Sección de contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes contactarme a través de los siguientes medios:</p>
+    <ul>
+      <li>Email: reveronprograma@gmail.com</li>
+      <li>Teléfono: +34643518623</li>
+      <li>Redes sociales: enlace a tus perfiles en redes sociales</li>
+    </ul>
+  </section>
+  <!-- Puedes agregar más secciones según tus necesidades -->
 </body>
 </html>
