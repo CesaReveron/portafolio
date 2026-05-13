@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización con IA - César Reverón</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f1419; color: #e7e9ea; padding: 40px 20px; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: #1d9bf0; margin-bottom: 20px; }
+        h2 { color: #00d4ff; margin: 30px 0 15px; border-bottom: 1px solid #2f3336; padding-bottom: 10px; }
+        code { background: #161b22; padding: 2px 6px; border-radius: 4px; color: #f7931a; }
+        pre { background: #161b22; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 15px 0; }
+        pre code { background: none; padding: 0; }
+        .back { display: inline-block; margin-bottom: 20px; color: #71767b; text-decoration: none; }
+        .back:hover { color: #1d9bf0; }
+        ul { margin-left: 20px; }
+        li { margin: 8px 0; }
+        .tech-tag { background: #1a1a2e; color: #00d4ff; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; display: inline-block; margin: 3px; }
+        .feature-card { background: #161b22; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #1d9bf0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back">← Volver al portafolio</a>
+
+        <h1>Automatización con IA</h1>
+        <p>Este proyecto demuestra capacidades de automatización de tareas técnicas mediante la integración de APIs de IA generativa.</p>
+
+        <div style="margin: 20px 0;">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">APIs IA</span>
+            <span class="tech-tag">Automation</span>
+            <span class="tech-tag">Prompt Engineering</span>
+        </div>
+
+        <h2>Tecnologías</h2>
+        <ul>
+            <li><strong>Python 3.x</strong> - Lenguaje principal</li>
+            <li><strong>requests</strong> - Consumo de APIs HTTP</li>
+            <li><strong>python-dotenv</strong> - Gestión de variables de entorno</li>
+            <li><strong>APIs de IA</strong> - OpenAI, Anthropic, u otras</li>
+        </ul>
+
+        <h2>Scripts Disponibles</h2>
+
+        <div class="feature-card">
+            <h3>api_template.py</h3>
+            <p>Plantilla básica para consumir APIs de IA de forma estructurada.</p>
+            <pre><code>import os
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+API_URL = "https://api.openai.com/v1/chat/completions"
+
+def generate_content(prompt, model="gpt-3.5-turbo"):
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}]
+    }
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()</code></pre>
+        </div>
+
+        <div class="feature-card">
+            <h3>Funciones Principales</h3>
+            <ul>
+                <li><code>generate_content()</code> - Genera contenido mediante IA</li>
+                <li><code>analyze_log()</code> - Analiza logs técnicos e identifica errores</li>
+                <li><code>generate_documentation()</code> - Genera documentación técnica automática</li>
+            </ul>
+        </div>
+
+        <h2>Aplicaciones</h2>
+        <ul>
+            <li>Generación de documentación técnica</li>
+            <li>Automatización de análisis de logs</li>
+            <li>Resumen automático de reportes</li>
+            <li>Optimización de prompts para tareas específicas</li>
+            <li>Transformación de datos a texto descriptivo</li>
+        </ul>
+
+        <h2>Uso</h2>
+        <pre><code># 1. Crear archivo .env con tu API key
+echo "API_KEY=tu_api_key" > .env
+
+# 2. Instalar dependencias
+pip install requests python-dotenv
+
+# 3. Ejecutar
+python scripts/api_template.py</code></pre>
+
+        <h2>Consideraciones de Seguridad</h2>
+        <ul>
+            <li>Mantener API keys fuera del código (usar variables de entorno)</li>
+            <li>Implementar rate limiting para evitar exceder límites de API</li>
+            <li>Considerar costos de API al diseñar flujos automatizados</li>
+        </ul>
+
+        <p style="margin-top: 40px; color: #71767b;">
+            <a href="https://github.com/CesaReveron/portafolio/tree/main/proyectos/03_automacion" style="color: #1d9bf0;">Ver código en GitHub →</a>
+        </p>
+    </div>
+</body>
+</html>
