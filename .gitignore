@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (excepto sample)
+proyectos/01_eda/data/*.csv
+!proyectos/01_eda/data/dataset.csv
+!proyectos/01_eda/data/dataset_cleaned.csv
+proyectos/01_eda/data/*.png
+
+# Environment
+.env
+.env.local
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dashboard metrics (se regenera)
+proyectos/02_dashboard/data/*.json
+!proyectos/02_dashboard/data/metrics.json

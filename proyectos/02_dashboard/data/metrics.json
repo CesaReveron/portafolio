@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "total_records": 595,
+    "avg_value": 34.84,
+    "error_rate": 25.21,
+    "avg_response_time": 7.71
+  },
+  "by_category": {
+    "Electronica": 131,
+    "Calidad": 129,
+    "Software": 117,
+    "Logistica": 114,
+    "Mecanica": 104
+  },
+  "avg_by_category": {
+    "Calidad": 32.11,
+    "Electronica": 35.43,
+    "Logistica": 39.72,
+    "Mecanica": 29.39,
+    "Software": 37.28
+  },
+  "by_region": {
+    "Sur": 132,
+    "Este": 128,
+    "Centro": 119,
+    "Oeste": 110,
+    "Norte": 106
+  },
+  "avg_by_region": {
+    "Centro": 33.79,
+    "Este": 36.49,
+    "Norte": 34.37,
+    "Oeste": 33.45,
+    "Sur": 35.73
+  },
+  "by_status": {
+    "Mantenimiento": 166,
+    "Inactivo": 155,
+    "Error": 150,
+    "Activo": 124
+  },
+  "monthly_labels": [
+    "Jan 2025",
+    "Feb 2025",
+    "Mar 2025"
+  ],
+  "monthly_values": [
+    32.09,
+    37.04,
+    36.35
+  ]
+}

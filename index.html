@@ -1,175 +1,478 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Portafolio Personal</title>
-  <style>
-    /* Reset de estilos para el body */
-    body {
-    margin: 0;
-    padding: 0;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>César Reverón - Data Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Estilos generales para los encabezados */
-    h1, h2 {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
 
-    h1{
-        margin-bottom: 20px;
-    }
+        nav {
+            background: #1a1a2e;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    /* Estilos para la sección de inicio */
-    #inicio {
-    padding: 50px;
-    background-color: #ffffff;
-      padding: 50px;
-      background-color: #800000;
-      text-align: center;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
 
-    #inicio img {
-    width: 150px; /* Cambiar el ancho de la imagen según tu preferencia */
-    height: 150px; /* Cambiar la altura de la imagen según tu preferencia */
-    border-radius: 50%; /* Opcional: agregar bordes redondeados a la imagen */
-      width: 150px; /* Cambiar el ancho de la imagen según tu preferencia */
-      height: 150px; /* Cambiar la altura de la imagen según tu preferencia */
-      border-radius: 50%; /* Opcional: agregar bordes redondeados a la imagen */
-      display: inline-block;
-      margin-top: 20px;
-      margin-bottom: 20px;
+        nav a {
+            color: #eee;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    }
+        nav a:hover {
+            color: #00d4ff;
+        }
 
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    /* Estilos para la sección de habilidades */
-    #habilidades {
-    padding: 50px;
-    background-color: #003DA5;
-      padding: 50px;
-      background-color: #3498DB;
-    }
+        #inicio {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
 
-    /* Estilos para la lista de habilidades */
-    #habilidades ul {
-    list-style-type: none;
-      list-style-type: none;
-    }
+        #inicio h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-    /* Estilos para la sección de proyectos */
-    #proyectos {
-    padding: 50px;
-    background-color: #EF3340;
-      padding: 50px;
-      background-color: #27AE60 ;
-    }
+        #inicio .rol {
+            font-size: 1.5rem;
+            color: #00d4ff;
+            margin-bottom: 1.5rem;
+        }
 
-    /* Estilos para la lista de proyectos */
-    #proyectos ul {
-    list-style-type: none;
-      list-style-type: none;
-    }
+        #inicio p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #ccc;
+        }
 
-    /* Estilos para la sección de contacto */
-    #contacto {
-    padding: 50px;
-    background-color: #ECF0F1 ;
-      padding: 50px;
-      background-color: #34495E;
-    }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
 
-    /* Estilos para la lista de contacto */
-    #contacto ul {
-    list-style-type: none;
-    list-style-type: none;
-    }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
 
-    /* Estilos generales para los párrafos y listas */
-    p, ul {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #fbf8f8;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: #efe9e9;
-    }
+        .social-links a:hover {
+            background: #00d4ff;
+            border-color: #00d4ff;
+            color: #1a1a2e;
+        }
 
-    p{
-    max-width: 300px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    }
+        #sobre-mi {
+            background: white;
+        }
 
-    ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+        }
 
-    /*Estilos para los elementos de lista*/
-    li{
-        display: inline;
-        margin-right: 10px;
-    }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
 
-  </style>
-  <link rel="stylesheet" href="estilos.css">
+        .about-text h3 {
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #e8f4f8;
+            color: #1a1a2e;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        #habilidades {
+            background: #f5f7fa;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 0.3rem 0;
+            color: #555;
+        }
+
+        .skill-card li::before {
+            content: ">";
+            color: #00d4ff;
+            margin-right: 0.5rem;
+        }
+
+        #proyectos {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #f5f7fa;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            background: #1a1a2e;
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header .project-num {
+            color: #00d4ff;
+            font-size: 0.9rem;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech span {
+            background: #1a1a2e;
+            color: #00d4ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #1a1a2e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            color: #00d4ff;
+        }
+
+        #contacto {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+        }
+
+        #contacto h2 {
+            color: white;
+        }
+
+        #contacto p {
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+        }
+
+        footer {
+            background: #0f0f1a;
+            color: #666;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            #inicio h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Sección de inicio -->
-  <section id="inicio">
-    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de cabecera">
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <h1>Cesar Reveron</h1>
-    <p>Programador Web en formación continua. Habilidades en HTML, CSS, JavaScript. <br> Cogito ergo sum.</p>
-    <ul>
-        <!-- Enlaces a redes sociales -->
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        <li><a href="https://twitter.com/">Twitter</a></li>
-        <li><a href="https://github.com/CesaReveron">GitHub</a></li>
-        <!-- Agrega más enlaces a tus redes sociales aquí -->
-    </ul>
-  </section>
+    <section id="inicio">
+        <h1>César Reverón G.</h1>
+        <p class="rol">Data Analyst Técnico</p>
+        <p>Profesional con experiencia en integración de sistemas UAV/UAS, radioenlaces y telemetría. Especializado en análisis de datos, automatización de procesos y herramientas de IA aplicadas a productividad técnica.</p>
+        <div class="social-links">
+            <a href="https://github.com/CesaReveron" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/cesar-reveron" target="_blank">LinkedIn</a>
+        </div>
+    </section>
 
-  <!-- Sección de habilidades -->
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Otras habilidades relevantes</li>
-    </ul>
-  </section>
-  <!-- Sección de proyectos -->
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <ul>
-      <li>Nombre del Proyecto 1</li>
-      <li>Nombre del Proyecto 2</li>
-      <li>Nombre del Proyecto 3</li>
-      <!-- Puedes agregar más proyectos aquí -->
-    </ul>
-  </section>
-  <!-- Sección de contacto -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puedes contactarme a través de los siguientes medios:</p>
-    <ul>
-      <li>Email: reveronprograma@gmail.com</li>
-      <li>Teléfono: +34643518623</li>
-      <li>Redes sociales: enlace a tus perfiles en redes sociales</li>
-    </ul>
-  </section>
-  <!-- Puedes agregar más secciones según tus necesidades -->
+    <section id="sobre-mi">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>De la integración técnica al análisis de datos</h3>
+                <p>Mi trayectoria en integración y mantenimiento de sistemas UAV/UAS me ha proporcionado una base sólida en diagnóstico técnico, validación funcional y resolución de incidencias complejas. Estas habilidades son directamente aplicables al análisis de datos y la automatización de procesos.</p>
+                <p>Estoy en proceso de transición profesional hacia el sector Data & AI, desarrollando competencias en Python, SQL, visualización de datos y herramientas de automatización.</p>
+            </div>
+            <div>
+                <h3>Stack Tecnológico</h3>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Plotly</span>
+                    <span class="tech-tag">Chart.js</span>
+                    <span class="tech-tag">Jupyter</span>
+                    <span class="tech-tag">WSL/Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Análisis de Datos</h3>
+                <ul>
+                    <li>Exploratory Data Analysis (EDA)</li>
+                    <li>Limpieza y transformación de datos</li>
+                    <li>Detección de anomalías</li>
+                    <li>Estadística descriptiva</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Programación</h3>
+                <ul>
+                    <li>Python (Pandas, NumPy)</li>
+                    <li>SQL (consultas, joins, aggregaciones)</li>
+                    <li>JavaScript (básico)</li>
+                    <li>Automatización de scripts</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Visualización</h3>
+                <ul>
+                    <li>Matplotlib & Seaborn</li>
+                    <li>Plotly & Chart.js</li>
+                    <li>Power BI (básico)</li>
+                    <li>Dashboards interactivos</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Herramientas</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>VS Code</li>
+                    <li>Jupyter Notebook</li>
+                    <li>WSL / Terminal Linux</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos Técnicos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-num">Proyecto 01</span>
+                    <h3>Análisis Exploratorio de Datos (EDA)</h3>
+                </div>
+                <div class="project-body">
+                    <p>Procesamiento y visualización de datasets sintéticos. Incluye limpieza de datos, detección de anomalías y generación de estadísticas descriptivas.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Matplotlib</span>
+                        <span>Jupyter</span>
+                    </div>
+                    <a class="project-link" href="proyectos/01_eda/notebooks/analysis.ipynb">Ver Notebook →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-num">Proyecto 02</span>
+                    <h3>Dashboard de Datos Técnicos</h3>
+                </div>
+                <div class="project-body">
+                    <p>Dashboard interactivo con métricas operativas. Visualización de tendencias temporales, distribución por categorías y estados del sistema.</p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                        <span>JSON</span>
+                    </div>
+                    <a class="project-link" href="proyectos/02_dashboard/dashboard.html">Ver Dashboard →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-num">Proyecto 03</span>
+                    <h3>Automatización con IA</h3>
+                </div>
+                <div class="project-body">
+                    <p>Scripts de automatización que integran APIs de IA generativa. Optimización de tareas técnicas mediante prompt engineering.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>APIs IA</span>
+                        <span>Automación</span>
+                    </div>
+                    <a class="project-link" href="proyectos/03_automacion/">Ver Proyecto →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-num">Proyecto 04</span>
+                    <h3>Terminal y Línea de Comandos</h3>
+                </div>
+                <div class="project-body">
+                    <p>Gestión de entornos técnicos mediante terminal. Automatización CLI, control de versiones y flujo de trabajo técnico.</p>
+                    <div class="project-tech">
+                        <span>Bash</span>
+                        <span>Git</span>
+                        <span>WSL</span>
+                        <span>Python CLI</span>
+                    </div>
+                    <a class="project-link" href="proyectos/04_terminal/docs/">Ver Documentación →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <p>¿Interesado en mi perfil? Contáctame por cualquiera de estos canales:</p>
+        <div class="contact-methods">
+            <span class="contact-item">reveronprograma@gmail.com</span>
+            <span class="contact-item">+34 643 518 623</span>
+            <span class="contact-item">Torrejón de Ardoz, Madrid</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>Portafolio profesional desarrollado con Python, Pandas y JavaScript | César Reverón G. 2026</p>
+    </footer>
 </body>
 </html>

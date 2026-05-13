@@ -1,0 +1,64 @@
+{
+  "total_records": 595,
+  "date_range": {
+    "start": "2025-01-01 03:00:00",
+    "end": "2025-03-17 00:00:00"
+  },
+  "valor_stats": {
+    "mean": 34.84,
+    "median": 27.09,
+    "std": 30.29,
+    "min": 0.01,
+    "max": 126.44
+  },
+  "by_category": {
+    "Electronica": 131,
+    "Calidad": 129,
+    "Software": 117,
+    "Logistica": 114,
+    "Mecanica": 104
+  },
+  "by_region": {
+    "Sur": 132,
+    "Este": 128,
+    "Centro": 119,
+    "Oeste": 110,
+    "Norte": 106
+  },
+  "by_status": {
+    "Mantenimiento": 166,
+    "Inactivo": 155,
+    "Error": 150,
+    "Activo": 124
+  },
+  "avg_by_category": {
+    "Calidad": 32.11,
+    "Electronica": 35.43,
+    "Logistica": 39.72,
+    "Mecanica": 29.39,
+    "Software": 37.28
+  },
+  "avg_by_region": {
+    "Centro": 33.79,
+    "Este": 36.49,
+    "Norte": 34.37,
+    "Oeste": 33.45,
+    "Sur": 35.73
+  },
+  "errors_count": 150,
+  "error_rate": 25.21,
+  "monthly_trend": {
+    "2025-01-31": {
+      "mean": 32.09,
+      "count": 247
+    },
+    "2025-02-28": {
+      "mean": 37.04,
+      "count": 222
+    },
+    "2025-03-31": {
+      "mean": 36.35,
+      "count": 126
+    }
+  }
+}
