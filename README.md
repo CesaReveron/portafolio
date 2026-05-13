@@ -151,7 +151,7 @@ El sitio está configurado para GitHub Pages. Cada push a `main` activa el despl
 - **Email:** reveronprograma@gmail.com
 - **Teléfono:** +34 643 518 623
 - **GitHub:** [CesaReveron](https://github.com/CesaReveron)
-- **LinkedIn:** [César Reverón](https://linkedin.com/in/cesar-reveron)
+- **LinkedIn:** [César Reverón](https://www.linkedin.com/in/cesar-reveron-data)
 - **Ubicación:** Torrejón de Ardoz, Madrid
 
 ## Roadmap
